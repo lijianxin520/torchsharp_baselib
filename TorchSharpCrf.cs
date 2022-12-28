@@ -290,7 +290,7 @@ namespace TorchBaseLib
 
                 // Broadcast emission score for every possible current tag
                 // shape: (batch_size, 1, num_tags)
-                var broadcast_emission= emissions[i].unsqueeze(2);
+                var broadcast_emission= emissions[i].unsqueeze(1);
 
                 // Compute the score tensor of size (batch_size, num_tags, num_tags) where
                 // for each sample, entry at row i and column j stores the score of the best
